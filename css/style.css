@@ -30,64 +30,58 @@ button {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: #111;
 
-  height: 2.5rem;
-  padding: 0.5rem 0.75rem;
+  padding: 0.625rem 0.75rem;
   width: 100%;
 }
 
-/* ========== Container ========== */
-.container {
-  background: #fff;
-  width: 350px;
-  padding: 1.25rem 1rem;
-  border-radius: 0.25rem;
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
-
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* ========== Sign Up ========== */
 /* === Field === */
-#signup .field {
-  margin-bottom: 0.75rem;
+.field {
+  margin-top: 0.75rem;
 }
 
 /* |> Input */
-#signup .field input {
+.field input {
   margin-top: 0.25rem;
   border: solid 1px #ccc;
   border-radius: 0.25rem;
+
+  transition: box-shadow 0.1s;
 }
 
-#signup .field input:focus {
+.field input:focus {
   outline: none;
-  box-shadow: 0 0 0 0.125rem rgba(49, 132, 253, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
 }
 
-#signup .field input::placeholder {
+.field input::placeholder {
   color: #ccc;
 }
 
 /* Success */
-#signup .field input.success {
+.field input.success {
   border-color: #198754;
 }
 
+.field input.success:focus {
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
+}
+
 /* Error */
-#signup .field input.error {
+.field input.error {
   border-color: #dc3545;
 }
 
+.field input.error:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
 /* |> Small */
-#signup .field small {
+.field small {
   color: #dc3545;
 }
 
-/* |> Full (Submit button) */
-#signup .field .full {
+/* |> Full */
+.field .full {
   color: #fff;
   background: #0d6efd;
   border-radius: 0.25rem;
@@ -95,7 +89,22 @@ button {
   transition: background 0.3s;
 }
 
-#signup .field .full:hover {
+.field .full:hover {
   background: #0b5ed7;
   cursor: pointer;
+}
+
+/* ========== Container ========== */
+.container {
+  background: #fff;
+  width: 350px;
+  padding: 1.5rem 1rem;
+  border-radius: 0.25rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
